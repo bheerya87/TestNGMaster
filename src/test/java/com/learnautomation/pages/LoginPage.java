@@ -12,15 +12,15 @@ public class LoginPage {
 		this.driver=ldriver;  
 	}
 	
-	private @FindBy(name="email") WebElement uname;
-	private @FindBy(name="password1") WebElement pass;
-	private @FindBy(xpath="//div[@class='ui fluid large blue submit button']") WebElement loginButton;
+	private @FindBy(id="email") WebElement uname;
+	private @FindBy(name="passwd") WebElement pass;
+	private @FindBy(id="SubmitLogin") WebElement loginButton;
 	
 	
 	public void loginToCRM(String usernameApp,String passwordApp) throws InterruptedException {
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		uname.sendKeys(usernameApp);
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		pass.sendKeys(passwordApp);
 		loginButton.click();
 		
